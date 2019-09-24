@@ -1,11 +1,10 @@
 import cv2
 import numpy as np 
 
+def main(filename):
 
-if __name__ == '__main__' :
-
-    # Read image, type the image's name here:
-    img = cv2.imread("image.png")
+	# Read image, type the image's name here:
+    img = cv2.imread(filename)
     hsv_img = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 
     print("Select the Region Of Interest (ROI) on the image (click and drag)")
@@ -53,8 +52,17 @@ if __name__ == '__main__' :
     print("color_l = " + str(color_l))
     mask_img = cv2.inRange(hsv_img, color_l, color_h)
     resultHSV = cv2.bitwise_and(img, img, mask = mask_img)
+
     # Display cropped image
     cv2.imshow("Selected region", target_img0)
     cv2.imshow("Masked image", resultHSV)
+
     cv2.waitKey(0)
+    cv2.destroyAllWindows()
+
+if __name__ == '__main__' :
+
+	main("image.png")
+
+   
     
