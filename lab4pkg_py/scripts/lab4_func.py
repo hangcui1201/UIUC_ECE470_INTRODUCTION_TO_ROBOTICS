@@ -8,13 +8,11 @@ Use 'expm' for matrix exponential.
 Angles are in radian, distance are in meters.
 """
 
-def get_MS():
+def Get_MS():
 	# =================== Your code starts here ====================#
 	# Fill in the correct values for a1~6 and q1~6, as well as the M matrix
 	M = np.eye(4)
 	S = np.zeros((6,6))
-	
-
 
 
 
@@ -38,7 +36,8 @@ def lab_fk(theta1, theta2, theta3, theta4, theta5, theta6):
 	# =================== Your code starts here ====================#
 	theta = np.array([theta1,theta2,theta3,theta4,theta5,theta6])
 	T = np.eye(4)
-    M, S = get_MS()
+
+	M, S = Get_MS()
 
 
 
@@ -51,7 +50,7 @@ def lab_fk(theta1, theta2, theta3, theta4, theta5, theta6):
 	
 	print(str(T) + "\n")
 
-	return_value[0] = theta1 - PI
+	return_value[0] = theta1 + PI
 	return_value[1] = theta2
 	return_value[2] = theta3
 	return_value[3] = theta4 - (0.5*PI)
