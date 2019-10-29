@@ -1,6 +1,7 @@
 import rospkg
+import numpy as np
 
-PI = 3.1415926535
+PI = np.pi
 
 # messages for student to use
 from ur3_driver.msg import command

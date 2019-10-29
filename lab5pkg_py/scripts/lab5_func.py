@@ -66,18 +66,16 @@ def lab_invk(xWgrip, yWgrip, zWgrip, yaw_WgripDegree):
     # theta1 to theta6
 	thetas = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
-	a1 = 0
-	d1 = 0.152
-	a2 = 0.244
-	d2 = 0.120
-	a3 = 0.213
-	d3 = -0.093
-	a4 = 0
-	d4 = 0.083
-	a5 = 0
-	d5 = 0.083
-	a6 = 0.0535
-	d6 = (0.082+0.056)
+	l01 = 0.152
+	l02 = 0.120
+	l03 = 0.244
+	l04 = 0.093
+	l05 = 0.213
+	l06 = 0.083
+	l07 = 0.083
+	l08 = 0.082    
+	l09 = 0.0535
+	l10 = 0.059   # thickness of aluminum plate is around 0.006
 
 	# xgrip = ?
 	# ygrip = ?
@@ -99,7 +97,7 @@ def lab_invk(xWgrip, yWgrip, zWgrip, yaw_WgripDegree):
 
 	thetas[1]= -PI/4     # Default value Need to Change
 	thetas[2]= PI/2      # Default value Need to Change
-	thetas[3]= (-PI*3)/4 # Default value Need to Change
+	thetas[3]= (-PI*3)/4 # Default value Need to Change, need + (0.5*PI) for compensation
 	thetas[4]=-PI/2      # Default value Need to Change
 
 	print("theta1 to theta6: " + str(thetas) + "\n")
